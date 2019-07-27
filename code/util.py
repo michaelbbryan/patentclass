@@ -1,4 +1,6 @@
-
+"""
+Utilities and code snippets
+"""
 def counttags(node):
     c = {}
     for child in node:

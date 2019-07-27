@@ -119,10 +119,29 @@ print(datetime.datetime.now())
 # Calc predictions using the model and write them to file
 predictions = model.predict(patent_sequences)
 with open("preds.csv", 'w', newline='') as predfile:
-    pred = csv.DictWriter(predfile, fieldnames=['pub','code','prb'])
+    pred = csv.DictWriter(predfile, fieldnames=['pub','ipc','prb'])
     for p in range(patents.shape[0]):
         print(p)
-        for c in range( len(ipcs_unique)):
+        for c in range(len(ipcs_unique)):
             mute = pred.writerow({'pub': patents.pub[p],'ipc':ipcs_unique[c], 'prb':predictions[p,c]})
 
 # Use the predictions.py to validate the model
+
+
+patent_sequences
+ipcs_binarized
+binarizer.inverse_transform
+tokenizer.sequences_to_texts([encoded_argmax])
+
+check the first obs pub, text and ipcs
+
+print(model.summary())
+p = pd.dataframe(columns=['pub','ipc','prb'])
+counter = 0
+for p in range(patents.shape[0]):
+    counter += 1
+    print(counter)
+    for c in range(len(ipcs_unique)):
+        p = p.append({'pub': patents.pub[p],'ipc':ipcs_unique[c], 'prb':predictions[p,c]},
+                       ignore_index=True)
+
