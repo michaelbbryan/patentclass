@@ -73,8 +73,6 @@ for word, i in word_index.items():
         embedding_matrix[i] = dup
         no_embedding = no_embedding + 1
 
-print(no_embedding," words have no embedding")
-
 # Calculate the weights, cost for each class; more frequent less weighted
 ipc_inv = {}
 for i in ipcs_unique:
@@ -115,33 +113,11 @@ fit_history = model.fit(patent_sequences, ipcs_binarized,
 print(datetime.datetime.now())
 
 # Use the model history plot
-
-# Calc predictions using the model and write them to file
-predictions = model.predict(patent_sequences)
-with open("preds.csv", 'w', newline='') as predfile:
-    pred = csv.DictWriter(predfile, fieldnames=['pub','ipc','prb'])
-    for p in range(patents.shape[0]):
-        print(p)
-        for c in range(len(ipcs_unique)):
-            mute = pred.writerow({'pub': patents.pub[p],'ipc':ipcs_unique[c], 'prb':predictions[p,c]})
-
-# Use the predictions.py to validate the model
-
-
-patent_sequences
-ipcs_binarized
-binarizer.inverse_transform
-tokenizer.sequences_to_texts([encoded_argmax])
-
-check the first obs pub, text and ipcs
-
 print(model.summary())
-p = pd.dataframe(columns=['pub','ipc','prb'])
-counter = 0
-for p in range(patents.shape[0]):
-    counter += 1
-    print(counter)
-    for c in range(len(ipcs_unique)):
-        p = p.append({'pub': patents.pub[p],'ipc':ipcs_unique[c], 'prb':predictions[p,c]},
-                       ignore_index=True)
+print(fit_history)
+print(no_embedding," words have no embedding")
+print(len(ipcs_unique)," unique ipcs assigned to ...")
+print(patents.shape[0]," patents")
+
+
 
