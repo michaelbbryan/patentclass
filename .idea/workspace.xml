@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4cc71a5-98e1-47d1-812c-051c0f05b2b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/code/multilabel_with_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/multilabel_with_keras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/predictions.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/predictions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Multilabel Classification of Patent Text.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Multilabel Classification of Patent Text.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Multilabel Classification of Patent Text.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Multilabel Classification of Patent Text.pptx" afterDir="false" />
-    </list>
+    <list default="true" id="e4cc71a5-98e1-47d1-812c-051c0f05b2b6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/util.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code/munge_set.sql" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
