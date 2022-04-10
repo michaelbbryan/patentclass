@@ -7,4 +7,6 @@ These weekly XML files provide the patent description and abstract with several 
 sample week of the extracted data is available in the data folder.
 A MySQL database is used to stage the text and IPC assigments.
 The multilabel model is estimated using Tensorflow and Keras and needs a server with 80GB of memory to estimate.
-The study used an AWS r5a.4xlarge with 16 CPUs and 128GB memory
+The study used an AWS r5a.4xlarge with 16 CPUs and 128GB memory.
+
+The project's data extraction python (get_red_book.py) was updated for pulling 2021 versions of this publication.
